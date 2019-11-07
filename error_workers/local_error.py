@@ -1,6 +1,7 @@
 import pandas as pd
+from error_workers.base_error import BaseError
 
-class LocalError():
+class LocalError(BaseError):
     @staticmethod
     def calculate(exact_points, method_points):
         exact_x, exact_y = exact_points

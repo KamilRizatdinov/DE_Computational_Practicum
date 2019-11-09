@@ -8,7 +8,7 @@ class RungeKutta(BaseSolution):
         data = {'xi': [x0] * n, 'yi': [y0] * n}
         df = pd.DataFrame(data)
 
-        for i in range(1, n):
+        for i in range(1, n+1):
             df.loc[i, 'xi'] = df.loc[i-1, 'xi'] + h
             k1 = func(df.loc[i-1, 'xi'], df.loc[i-1, 'yi'])
             k2 = func(df.loc[i-1, 'xi'] + h/2, df.loc[i-1, 'yi'] + h*k1/2)
